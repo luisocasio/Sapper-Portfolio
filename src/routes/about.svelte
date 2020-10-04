@@ -40,11 +40,13 @@
 
 <style>
   .about-wrapper {
+    max-width: 1100px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
   }
   img {
     width: 50%;
@@ -55,10 +57,10 @@
   }
   .welcome-title {
     margin: 1.5rem;
-	font-weight: 400;
+    font-weight: 400;
   }
-  .welcome-paragraph{
-	  margin: 1rem;
+  .welcome-paragraph {
+    margin: 1rem;
   }
   .content-section {
     width: 50%;

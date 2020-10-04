@@ -28,6 +28,6 @@
   }
   .banner {
     width: 100%;
-    height: 650px;
+    height: 550px;
   }
 </style>
