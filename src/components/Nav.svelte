@@ -2,7 +2,9 @@
   export let segment;
 </script>
 
-<nav>
+
+
+<nav name="top">
   <h1 class="main-title">Full Stack Web Developer</h1>
 
   <ul>

@@ -7,9 +7,8 @@
   import TechIcons from '../components/TechIcons.svelte'
 </script>
 
-<a name="top"></a>
-<main class="wrapper">
 
+<main class="wrapper">
     <img
       class="banner"
       alt="art work"

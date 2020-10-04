@@ -1,6 +1,7 @@
 <svelte:head>
-	<title>About</title>
+  <title>About</title>
 </svelte:head>
 
-<h1>This is where you can view about me</h1>
-
+<section>
+  <h1>WELCOME TO MY PORTFOLIO.</h1>
+</section>
