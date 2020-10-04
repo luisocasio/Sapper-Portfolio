@@ -1,5 +1,4 @@
 <footer class="footer">
-
   <div class="social-media-icons">
     <a href="https://www.instagram.com/fullstack_og/" alt="social-media-icon">
       <img
@@ -23,7 +22,7 @@
 
   <div class="column-wrapper">
     <div class="column-footer-1">
-      <p>back to top</p>
+      <a href="#top">Back to top of page</a>
     </div>
 
     <div class="column-footer-1">
@@ -31,14 +30,14 @@
     </div>
 
     <div class="column-footer-1">
-      <p>about</p>
-      <p>contact</p>
+      <a href="about">about</a>
+      <a href="contact">contact</a>
     </div>
   </div>
 </footer>
 
 <style>
-  .column-wrapper{
+  .column-wrapper {
     width: 100%;
     display: flex;
     justify-content: space-around;

@@ -7,6 +7,7 @@
   import TechIcons from '../components/TechIcons.svelte'
 </script>
 
+<a name="top"></a>
 <main class="wrapper">
 
     <img
