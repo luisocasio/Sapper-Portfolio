@@ -9,7 +9,10 @@
     "start": "node __sapper__/build"
   },
   "dependencies": {
+    "@apollo/client": "^3.2.2",
     "compression": "^1.7.1",
+    "graphql": "^15.3.0",
+    "graphql-tools": "^6.2.4",
     "polka": "next",
     "prismic-dom": "^2.2.4",
     "prismic-javascript": "^3.0.2",
