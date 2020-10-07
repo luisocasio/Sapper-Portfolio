@@ -10,7 +10,17 @@ export const projectURL = [
   { 2: "https://github.com/Lambda-School-Labs/quick-street-be" },
 ];
 
-export const projectAbout = [{ 0: "" }, { 1: "" }, { 2: "" }];
+export const projectAbout = [
+  {
+    0: "This is my first project and I need to add details",
+  },
+  {
+    1: "This is my second project and I need to add details",
+  },
+  {
+    2: "This is my third projec and I need to add details.",
+  },
+];
 
 export const projectStack = {
   0: ["Gatsby", "WordPress", "Graphql", "amplify", "route53", "lightsail"],
