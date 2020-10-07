@@ -23,7 +23,7 @@
 </main>
 
 <style>
-  .contact-title{
+  .contact-title {
     text-align: center;
     margin-top: 2rem;
   }
@@ -70,8 +70,5 @@
   #message_input {
     height: 250px;
     width: 50%;
-  }
-  .bottom {
-    padding: 1rem;
   }
 </style>
