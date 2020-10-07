@@ -2,20 +2,26 @@
   export let segment;
 </script>
 
-
-
 <nav name="top">
   <h1 class="main-title">Full Stack Web Developer</h1>
 
   <ul>
     <li>
-      <a sans-serif="{segment === undefined ? 'page' : undefined}" href="."
+      <a sans-serif="{segment === undefined ? 'page' : undefined}" href=""
         >home</a
       >
     </li>
     <li>
       <a sans-serif="{segment === 'about' ? 'page' : undefined}" href="about"
         >about</a
+      >
+    </li>
+
+    <li>
+      <a
+        sans-serif="{segment === 'contact' ? 'page' : undefined}"
+        href="contact"
+        >contact</a
       >
     </li>
 
