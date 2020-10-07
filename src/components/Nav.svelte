@@ -7,7 +7,7 @@
 
   <ul>
     <li>
-      <a sans-serif="{segment === undefined ? 'page' : undefined}" href=""
+      <a sans-serif="{segment === undefined ? 'page' : undefined}" href="."
         >home</a
       >
     </li>
