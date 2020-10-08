@@ -58,11 +58,11 @@
     margin-top:2.5rem ;
   }
   .column-footer-1 {
-    width: 12.5%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-center;
+    justify-content: center;
   }
   .social-media-icons {
     width: 100%;
@@ -70,21 +70,20 @@
     justify-content: space-between;
   }
   .social-media-box{
-    width: 12.5%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .footer {
     width: 100%;
-    height: 7.5rem;
+    height: 9.5rem;
     bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 10rem;
-    padding: 1rem;
     background-color: #21367f;
   }
 </style>
