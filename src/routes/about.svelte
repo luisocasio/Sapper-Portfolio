@@ -40,13 +40,12 @@
 
 <style>
   .about-wrapper {
-    max-width: 1100px;
     height: 100vh;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
   }
   img {
     width: 50%;

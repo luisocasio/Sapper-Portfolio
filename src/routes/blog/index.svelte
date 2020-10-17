@@ -25,63 +25,125 @@
 
 <script>
   export let document;
+  export let posts;
+
+  //still need to retrieve dates
+  let date = PrismicDOM.Date();
+
+  let formattedDate = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+
+    month: "short",
+
+    day: "2-digit",
+  }).format(date);
 </script>
 
 <svelte:head>
   <title>Welcome to my blog.</title>
 </svelte:head>
 
-<section class="blog-intro-section">
-  <h1>{PrismicDOM.RichText.asText(document.data.headline)}</h1>
-  <img
-    class="blog-profile-pic"
-    src="{document.data.image.url}"
-    alt="headshot of man"
-  />
-  <p>{PrismicDOM.RichText.asText(document.data.description)}</p>
-</section>
+<main class="blog-wrapper">
+  <section class="blog-intro-section">
+    <h1>{PrismicDOM.RichText.asText(document.data.headline)}</h1>
+    <img
+      class="blog-profile-pic"
+      src="{document.data.image.url}"
+      alt="headshot of man"
+    />
+    <p>{PrismicDOM.RichText.asText(document.data.description)}</p>
+  </section>
 
-<section class="blog-post-section">
-  <h5>Blog Post's</h5>
-  <ul class="blog-post-list">
-    {#each posts as post}
-    <!-- we're using the non-standard `rel=prefetch` attribute to
+  <div class="section-wrapper">
+    <section class="blog-post-section">
+      <h5>Blog Post's</h5>
+      <ul class="blog-post-list">
+        {#each posts as post}
+        <!-- we're using the non-standard `rel=prefetch` attribute to
 					tell Sapper to load the data for the page as soon as
 					the user hovers over the link or taps it, instead of
 					waiting for the 'click' event -->
-    <p class="blog-post-links">
-      <a rel="prefetch" href="{linkResolver(post)}">
-        {PrismicDOM.RichText.asText(post.data.title)}
-      </a>
-    </p>
-    {/each}
-  </ul>
-</section>
+        <li class="blog-post-links">
+          <a rel="prefetch" href="{linkResolver(post)}">
+            <h5>{PrismicDOM.RichText.asText(post.data.title)}</h5>
+          </a>
+          <p>{formattedDate}</p>
+        </li>
+        {/each}
+      </ul>
+    </section>
+
+    <section class="paragraph-section">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+        laudantium, atque unde minus et ullam eos tempora obcaecati ipsa amet
+        molestias perferendis quasi. Quam incidunt deserunt culpa, fugit minima
+        voluptate.
+      </p>
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+        laudantium, atque unde minus et ullam eos tempora obcaecati ipsa amet
+        molestias perferendis quasi. Quam incidunt deserunt culpa, fugit minima
+        voluptate.
+      </p>
+    </section>
+  </div>
+</main>
 
 <style>
+  .blog-wrapper {
+    height: 100vh;
+  }
+
   .blog-intro-section {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
   }
 
   .blog-profile-pic {
     border-radius: 50%;
   }
 
+  .section-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .paragraph-section {
+    width: 50%;
+    margin-top: 5rem;
+  }
+
   .blog-post-section {
-    width: 25%;
+    width: 50%;
+    height: 45rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    margin-top: 5rem;
   }
 
   .blog-post-list {
-    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    border: 1px solid #fff;
+    margin-top: 2.5rem;
+  }
+
+  .blog-post-links {
+    height: 10%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
   }
 </style>

@@ -32,7 +32,6 @@
   </div>
 
   <div class="column-wrapper">
-
     <div class="column-footer-1">
       <a href="#top">Back to top of page</a>
     </div>
@@ -55,7 +54,7 @@
     height: 50%;
     display: flex;
     justify-content: space-between;
-    margin-top:2.5rem ;
+    margin-top: 2.5rem;
   }
   .column-footer-1 {
     width: 100%;
@@ -69,21 +68,21 @@
     display: flex;
     justify-content: space-between;
   }
-  .social-media-box{
+  .social-media-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .footer {
-    width: 100%;
-    height: 9.5rem;
+    position: static;
+    left: 0;
     bottom: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10rem;
     background-color: #21367f;
   }
 </style>
