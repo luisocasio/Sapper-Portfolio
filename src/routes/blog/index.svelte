@@ -43,59 +43,51 @@
   <title>Welcome to my blog.</title>
 </svelte:head>
 
-<main class="blog-wrapper">
-  <section class="blog-intro-section">
-    <h1>{PrismicDOM.RichText.asText(document.data.headline)}</h1>
-    <img
-      class="blog-profile-pic"
-      src="{document.data.image.url}"
-      alt="headshot of man"
-    />
-    <p>{PrismicDOM.RichText.asText(document.data.description)}</p>
-  </section>
+<section class="blog-intro-section">
+  <h1>{PrismicDOM.RichText.asText(document.data.headline)}</h1>
+  <img
+    class="blog-profile-pic"
+    src="{document.data.image.url}"
+    alt="headshot of man"
+  />
+  <p>{PrismicDOM.RichText.asText(document.data.description)}</p>
+</section>
 
-  <div class="section-wrapper">
-    <section class="blog-post-section">
-      <h5>Blog Post's</h5>
-      <ul class="blog-post-list">
-        {#each posts as post}
-        <!-- we're using the non-standard `rel=prefetch` attribute to
+<div class="section-wrapper">
+  <section class="blog-post-section">
+    <h5>Blog Post's</h5>
+    <ul class="blog-post-list">
+      {#each posts as post}
+      <!-- we're using the non-standard `rel=prefetch` attribute to
 					tell Sapper to load the data for the page as soon as
 					the user hovers over the link or taps it, instead of
 					waiting for the 'click' event -->
-        <li class="blog-post-links">
-          <a rel="prefetch" href="{linkResolver(post)}">
-            <h5>{PrismicDOM.RichText.asText(post.data.title)}</h5>
-          </a>
-          <p>{formattedDate}</p>
-        </li>
-        {/each}
-      </ul>
-    </section>
+      <li class="blog-post-links">
+        <a rel="prefetch" href="{linkResolver(post)}">
+          <h5>{PrismicDOM.RichText.asText(post.data.title)}</h5>
+        </a>
+        <p>{formattedDate}</p>
+      </li>
+      {/each}
+    </ul>
+  </section>
 
-    <section class="paragraph-section">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
-        laudantium, atque unde minus et ullam eos tempora obcaecati ipsa amet
-        molestias perferendis quasi. Quam incidunt deserunt culpa, fugit minima
-        voluptate.
-      </p>
+  <section class="paragraph-section">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel laudantium,
+      atque unde minus et ullam eos tempora obcaecati ipsa amet molestias
+      perferendis quasi. Quam incidunt deserunt culpa, fugit minima voluptate.
+    </p>
 
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
-        laudantium, atque unde minus et ullam eos tempora obcaecati ipsa amet
-        molestias perferendis quasi. Quam incidunt deserunt culpa, fugit minima
-        voluptate.
-      </p>
-    </section>
-  </div>
-</main>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel laudantium,
+      atque unde minus et ullam eos tempora obcaecati ipsa amet molestias
+      perferendis quasi. Quam incidunt deserunt culpa, fugit minima voluptate.
+    </p>
+  </section>
+</div>
 
 <style>
-  .blog-wrapper {
-    height: 100vh;
-  }
-
   .blog-intro-section {
     width: 100%;
     display: flex;
@@ -110,6 +102,7 @@
   }
 
   .section-wrapper {
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -117,12 +110,13 @@
 
   .paragraph-section {
     width: 50%;
+    height: 50%;
     margin-top: 5rem;
   }
 
   .blog-post-section {
     width: 50%;
-    height: 45rem;
+    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,11 +130,19 @@
     align-items: center;
     border: 1px solid #fff;
     margin-top: 2.5rem;
+    border-radius: 5px;
   }
 
   .blog-post-links {
     height: 10%;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .paragraph-section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
