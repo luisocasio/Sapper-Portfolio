@@ -7,7 +7,7 @@
 
   export async function preload({ params, query }) {
     const uid = params.uid;
-    document = await Client.getByUID("blog_post", uid);
+    document = await Client.getByUID("post", uid);
 
     if (document) {
       const title = PrismicDOM.RichText.asText(document.data.title);
