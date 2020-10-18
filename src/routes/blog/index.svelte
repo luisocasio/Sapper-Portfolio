@@ -73,13 +73,13 @@
   </section>
 
   <section class="paragraph-section">
-    <p>
+    <p class="paragraph-one">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel laudantium,
       atque unde minus et ullam eos tempora obcaecati ipsa amet molestias
       perferendis quasi. Quam incidunt deserunt culpa, fugit minima voluptate.
     </p>
 
-    <p>
+    <p class="paragraph-two">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel laudantium,
       atque unde minus et ullam eos tempora obcaecati ipsa amet molestias
       perferendis quasi. Quam incidunt deserunt culpa, fugit minima voluptate.
@@ -147,5 +147,10 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+  }
+
+  .paragraph-one,
+  .paragraph-two {
+    width: 80%;
   }
 </style>

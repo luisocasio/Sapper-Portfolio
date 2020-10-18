@@ -46,6 +46,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
   }
   img {
     width: 50%;

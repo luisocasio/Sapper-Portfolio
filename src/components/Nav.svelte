@@ -49,7 +49,6 @@
     display: flex;
     justify-content: space-between;
     height: 5rem;
-    display: flex;
     align-items: center;
   }
 
@@ -89,6 +88,5 @@
     text-decoration: none;
     padding: 1em 0.5em;
     display: block;
-    font-size: 1.25rem;
   }
 </style>
